@@ -81,3 +81,12 @@ mod uuid;
 
 #[cfg(feature = "uuid")]
 pub use uuid::{Uuid, UuidParseError};
+
+#[cfg(feature = "databases")]
+#[allow(unused_imports)]
+#[macro_use]
+extern crate rocket_contrib_codegen;
+
+#[cfg(feature = "databases")]
+#[doc(hidden)]
+pub use rocket_contrib_codegen::*;
